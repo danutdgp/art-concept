@@ -6,13 +6,16 @@
 
   <title>Servicii – confecții și structuri metalice | ART Concept</title>
   <meta name="description" content="Servicii ART Concept: porți și garduri metalice, balustrade și scări, structuri metalice, copertine și lucrări tehnice executate la comandă. Proiectare, execuție și montaj." />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <meta name="theme-color" content="#f3f7fb" />
   <meta name="author" content="ART METAL CONCEPT CONSTRUCT SRL" />
 
   <link rel="canonical" href="https://art-concept.ro/servicii.html" />
+  <link rel="alternate" href="https://art-concept.ro/servicii.html" hreflang="ro-RO" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ART Concept" />
+  <meta property="og:locale" content="ro_RO" />
   <meta property="og:title" content="Servicii – confecții și structuri metalice | ART Concept" />
   <meta property="og:description" content="Porți, garduri, balustrade, scări, structuri metalice și copertine. Execuție corectă, montaj și verificare." />
   <meta property="og:url" content="https://art-concept.ro/servicii.html" />
@@ -23,9 +26,12 @@
   <meta name="twitter:description" content="Servicii ART Concept: execuție la comandă pentru rezidențial și industrial." />
   <meta name="twitter:image" content="https://art-concept.ro/images/cover-art-concept.avif" />
 
+  <!-- IMPORTANT: dacă favicoanele sunt în /images, schimbă la images/... -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- opțional, dacă există -->
+  <link rel="manifest" href="/site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,10 +39,54 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="servicii.css" />
+
+  <!-- JSON-LD (publisher/logo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://art-concept.ro/#org",
+        "name": "ART Concept",
+        "legalName": "ART METAL CONCEPT CONSTRUCT SRL",
+        "url": "https://art-concept.ro/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://art-concept.ro/images/logo-art-concept.avif"
+        },
+        "telephone": "+40761320338",
+        "email": "marian_cotea_73@yahoo.com",
+        "sameAs": [
+          "https://web.facebook.com/Artmetalc",
+          "https://www.tiktok.com/@.art.metal.concep"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://art-concept.ro/#website",
+        "url": "https://art-concept.ro/",
+        "name": "ART Concept",
+        "publisher": { "@id": "https://art-concept.ro/#org" },
+        "inLanguage": "ro-RO"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://art-concept.ro/servicii.html#webpage",
+        "url": "https://art-concept.ro/servicii.html",
+        "name": "Servicii – confecții și structuri metalice | ART Concept",
+        "isPartOf": { "@id": "https://art-concept.ro/#website" },
+        "about": { "@id": "https://art-concept.ro/#org" },
+        "inLanguage": "ro-RO",
+        "description": "Servicii ART Concept: porți și garduri metalice, balustrade și scări, structuri metalice, copertine și lucrări tehnice executate la comandă. Proiectare, execuție și montaj."
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="page-servicii">
-  <!-- HEADER – IDENTIC CU INDEX -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
@@ -54,7 +104,7 @@
           <li><a href="despre.html">Despre noi</a></li>
           <li><a href="servicii.html" class="active">Servicii</a></li>
           <li><a href="portofoliu.html">Portofoliu</a></li>
-          <li><a href="proces.html">Proces de lucru</a></li>
+          <!-- scos: proces.html -->
           <li><a href="contact.html" class="btn btn-nav">Contact</a></li>
         </ul>
       </nav>
@@ -128,7 +178,6 @@
           </div>
         </div>
 
-        <!-- IMPORTANT: animăm DOAR .media-bg la click -->
         <div class="service-media reveal-zoom" role="button" tabindex="0" aria-label="Porți și garduri metalice">
           <div class="media-bg" aria-hidden="true"></div>
           <div class="media-glow" aria-hidden="true"></div>
@@ -188,7 +237,8 @@
           </ul>
 
           <div class="service-actions">
-            <a href="proces.html" class="btn btn-outline">Vezi cum lucrăm</a>
+            <!-- înlocuit: proces.html -->
+            <a href="despre.html" class="btn btn-outline">Vezi cum lucrăm</a>
             <a href="contact.html" class="btn btn-primary">Cere o discuție</a>
           </div>
         </div>
@@ -253,7 +303,7 @@
       </div>
     </section>
 
-    <!-- MINI PROCES -->
+    <!-- MINI PROCES (rămâne în pagină, dar fără link la proces.html) -->
     <section class="section services-mini-process">
       <div class="container mini-process-inner">
         <header class="mini-process-head reveal-up">
@@ -291,7 +341,8 @@
         </div>
 
         <div class="mini-process-cta reveal-up">
-          <a href="proces.html" class="btn btn-outline">Vezi procesul complet</a>
+          <!-- înlocuit: proces.html -->
+          <a href="portofoliu.html" class="btn btn-outline">Vezi exemple</a>
           <a href="contact.html" class="btn btn-primary">Începe cu un mesaj</a>
         </div>
       </div>
@@ -316,7 +367,7 @@
     </section>
   </main>
 
-  <!-- FOOTER – IDENTIC CU INDEX (îl păstrezi pe al tău dacă e deja) -->
+  <!-- FOOTER – IDENTIC CU INDEX -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-col footer-brand">
@@ -345,6 +396,30 @@
               <span>0761 320 338</span>
             </a>
           </li>
+
+          <li class="contact-item">
+            <a href="https://wa.me/40761320338" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-icon contact-icon-wa" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3.1a8.1 8.1 0 0 0-7.1 11.9L4 21l6.1-1a8.1 8.1 0 1 0 1.9-16.9Z" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.6 9.2c.1-.2.2-.2.3-.2h.3c.1 0 .2 0 .2.2s.3.8.3.8.1.1 0 .2l-.2.3c-.1.1-.1.2 0 .3.2.3.5.7.9 1 .4.3.9.5 1.2.6.1 0 .2 0 .3-.1l.3-.4c0-.1.1-.2.3-.1l.9.4c.2.1.3.1.3.2s0 .4-.1.6c-.1.2-.5.5-.8.5-.3.1-.9.1-1.5-.1a7 7 0 0 1-2.5-1.5 5.4 5.4 0 0 1-1.1-1.4c-.2-.3-.4-.8-.4-1.1 0-.3.2-.6.3-.7Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>0761 320 338</span>
+            </a>
+          </li>
+
+          <li class="contact-item">
+            <a href="mailto:marian_cotea_73@yahoo.com" class="contact-link">
+              <span class="contact-icon contact-icon-mail" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2" ry="2" fill="none" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M5 7.5 12 12l7-4.5" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>marian_cotea_73@yahoo.com</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -355,8 +430,34 @@
           <li><a href="despre.html">Despre noi</a></li>
           <li><a href="servicii.html">Servicii</a></li>
           <li><a href="portofoliu.html">Portofoliu</a></li>
-          <li><a href="proces.html">Proces de lucru</a></li>
+          <!-- scos: proces.html -->
           <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-social">
+        <h3>Social</h3>
+        <ul class="footer-social-list">
+          <li>
+            <a href="https://web.facebook.com/Artmetalc" target="_blank" rel="noopener" class="social-link social-link-fb">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 7h2.5V4.2C16 4 15.1 4 14.6 4 12.5 4 11 5.3 11 7.8V10H8v3h3v7h3v-7h2.4L17 10h-3V8c0-.8.3-1 1-1Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@.art.metal.concep" target="_blank" rel="noopener" class="social-link social-link-tt">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14.5 5.2c.6.7 1.4 1.2 2.3 1.4l.6.1v2.1a4.6 4.6 0 0 1-3-1v5.7a4.3 4.3 0 1 1-3.7-4.2v2.1a2.1 2.1 0 1 0 1.6 2V4.5h2.2v.7Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>TikTok</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -382,7 +483,7 @@
       });
     }
 
-    // Scroll reveal (IntersectionObserver) – păstrăm exact stilul
+    // Scroll reveal (IntersectionObserver)
     (function(){
       const targets = document.querySelectorAll(
         '.reveal-up, .reveal-left, .reveal-right, .reveal-zoom, .reveal-stagger'

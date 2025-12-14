@@ -1,0 +1,482 @@
+/* ------------------------------------------------------
+   ART Concept – contact.css
+   Stiluri SPECIFICE pentru contact.html
+   Totul sub .page-contact ca să nu atingă restul
+------------------------------------------------------- */
+
+body.page-contact{
+  background:
+    radial-gradient(circle at top left, rgba(59,130,246,0.08), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(14,165,233,0.06), transparent 55%),
+    linear-gradient(to bottom, rgba(245,249,255,1) 0, var(--bg-page) 42%, var(--bg-page) 100%);
+}
+
+/* text mic un pic mai mare + puțin mai gros */
+body.page-contact p,
+body.page-contact li{
+  font-size:1.02rem;
+  line-height:1.7;
+  font-weight:500;
+}
+
+body.page-contact .section-subtitle{
+  font-size:1.02rem;
+  font-weight:500;
+}
+
+/* ------------------------------------------------------
+   HERO CONTACT – aceeași logică ca restul (poză + overlay + panel)
+------------------------------------------------------- */
+
+.page-contact .hero-contact{
+  position:relative;
+  height:clamp(420px,70vh,620px);
+  background-image:url("images/hero-metal-3.avif");
+  background-size:cover;
+  background-position:center;
+  color:#f9fafb;
+  overflow:hidden;
+}
+
+.page-contact .hero-contact::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(
+    120deg,
+    rgba(15,23,42,0.95) 0,
+    rgba(15,23,42,0.72) 55%,
+    rgba(15,23,42,0.22) 100%
+  );
+}
+
+.page-contact .hero-contact::after{
+  content:"";
+  position:absolute;
+  inset:-120px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(14,165,233,0.20), transparent 55%),
+    radial-gradient(circle at 85% 70%, rgba(56,189,248,0.12), transparent 55%);
+  pointer-events:none;
+}
+
+.page-contact .hero-contact-inner{
+  position:relative;
+  z-index:1;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+
+.page-contact .hero-panel{
+  max-width:720px;
+}
+
+/* chips rapide – diferențiere față de alte pagini */
+.page-contact .hero-contact-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin:.95rem 0 1rem;
+}
+
+.page-contact .hero-chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.38rem .9rem;
+  border-radius:999px;
+  font-size:.86rem;
+  color:#e5f2fc;
+  border:1px solid rgba(191,219,254,0.75);
+  background:rgba(15,23,42,0.55);
+  box-shadow:0 10px 26px rgba(15,23,42,0.55);
+  transition:transform .14s ease-out, background .14s ease-out, border-color .14s ease-out;
+}
+
+.page-contact .hero-chip:hover{
+  transform:translateY(-1px);
+  background:rgba(15,23,42,0.68);
+  border-color:#38bdf8;
+}
+
+.page-contact .hero-panel-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+}
+
+/* ------------------------------------------------------
+   CONTACT MAIN – layout editorial, fără “pădure de carduri”
+------------------------------------------------------- */
+
+.page-contact .contact-main{
+  background:var(--bg-section-main);
+  border-top:1px solid rgba(209,213,219,0.9);
+}
+
+.page-contact .contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,0.95fr) minmax(0,1.15fr);
+  gap:2.4rem;
+  align-items:start;
+}
+
+/* aside cu separator vertical (arată diferit față de restul site-ului) */
+.page-contact .contact-aside{
+  padding-right:2rem;
+  border-right:1px solid rgba(209,213,219,0.9);
+}
+
+@media (min-width:1025px){
+  .page-contact .contact-aside{
+    position:sticky;
+    top:96px;
+  }
+}
+
+.page-contact .contact-aside-head h2{
+  margin-bottom:.35rem;
+}
+
+.page-contact .contact-aside-head h2::after{
+  content:"";
+  display:block;
+  width:78px;
+  height:3px;
+  margin:.55rem 0 0;
+  border-radius:999px;
+  background:linear-gradient(90deg,#0ea5e9,#0369a1);
+}
+
+.page-contact .contact-lead{
+  margin:.75rem 0 0;
+  color:var(--text-muted);
+}
+
+/* linii contact (nu “carduri”, ci rânduri cu separatoare) */
+.page-contact .contact-lines{
+  list-style:none;
+  margin:1.2rem 0 0;
+  padding:0;
+  display:grid;
+  gap:0;
+}
+
+.page-contact .contact-line{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:.9rem;
+  padding:.95rem 0;
+}
+
+.page-contact .contact-line + .contact-line{
+  border-top:1px solid transparent;
+  border-image:linear-gradient(
+    to right,
+    rgba(14,165,233,0.12),
+    rgba(14,165,233,0.45),
+    rgba(14,165,233,0.12)
+  ) 1;
+}
+
+.page-contact .contact-badge{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(14,165,233,0.06);
+  border:1px solid rgba(148,163,184,0.75);
+}
+
+.page-contact .contact-badge svg{
+  width:18px;
+  height:18px;
+  display:block;
+  stroke:#0369a1;
+  stroke-width:1.6;
+  fill:none;
+}
+
+.page-contact .contact-badge--wa{
+  background:rgba(37,211,102,0.08);
+  border-color:#25d366;
+  color:#25d366; /* ca fill="currentColor" să fie verde */
+}
+
+.page-contact .contact-badge--wa svg{
+  stroke:#25d366;
+  fill:none;
+}
+
+.page-contact .contact-badge--wa svg path[fill="currentColor"]{
+  fill:currentColor;
+  stroke:none;
+}
+
+
+.page-contact .contact-line-label{
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent-dark);
+  margin:0 0 .2rem;
+  font-weight:600;
+}
+
+.page-contact .contact-line-link{
+  display:inline-block;
+  font-size:1.05rem;
+  font-weight:600;
+  color:#0f172a;
+}
+
+.page-contact .contact-line-link:hover{
+  color:var(--accent-dark);
+}
+
+.page-contact .contact-line-note{
+  margin-top:.25rem;
+  color:var(--text-muted);
+  font-size:.95rem;
+}
+
+/* ghid scurt */
+.page-contact .contact-guidance{
+  margin-top:1.4rem;
+  padding-top:1.2rem;
+  border-top:1px solid rgba(209,213,219,0.9);
+}
+
+.page-contact .contact-guidance h3{
+  margin:0 0 .5rem;
+  font-size:1.08rem;
+}
+
+.page-contact .contact-check{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:0;
+  color:var(--text-muted);
+}
+
+.page-contact .contact-check li{
+  position:relative;
+  padding:.48rem 0 .48rem 1.65rem;
+  margin:0;
+}
+
+.page-contact .contact-check li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.95rem;
+  width:14px;
+  height:8px;
+  border-left:2px solid #0ea5e9;
+  border-bottom:2px solid #0ea5e9;
+  transform:rotate(-45deg);
+}
+
+.page-contact .contact-check li + li{
+  border-top:1px solid transparent;
+  border-image:linear-gradient(
+    to right,
+    rgba(14,165,233,0.10),
+    rgba(14,165,233,0.35),
+    rgba(14,165,233,0.10)
+  ) 1;
+}
+
+.page-contact .contact-small{
+  margin:.85rem 0 0;
+  color:var(--text-soft);
+  font-size:.96rem;
+}
+
+/* ------------------------------------------------------
+   FORM – un singur “panel” curat (nu multe carduri)
+------------------------------------------------------- */
+
+.page-contact .contact-form-wrap{
+  position:relative;
+  border-radius:18px;
+  border:1px solid rgba(148,163,184,0.55);
+  background:rgba(255,255,255,0.82);
+  box-shadow:0 18px 45px rgba(15,23,42,0.12);
+  padding:1.15rem 1.15rem 1.25rem;
+  overflow:hidden;
+}
+
+.page-contact .contact-form-wrap::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  right:10px;
+  top:0;
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#0ea5e9,#0369a1);
+  opacity:.95;
+}
+
+.page-contact .contact-form-head{
+  padding-top:.25rem;
+  margin-bottom:1rem;
+}
+
+.page-contact .form-alert{
+  border:1px solid rgba(34,197,94,0.35);
+  background:rgba(34,197,94,0.08);
+  color:#14532d;
+  padding:.8rem .9rem;
+  border-radius:14px;
+  margin-bottom:1rem;
+  font-weight:600;
+}
+
+/* form fields */
+.page-contact .contact-form{
+  margin:0;
+}
+
+.page-contact .hp{
+  position:absolute;
+  left:-9999px;
+  width:1px;
+  height:1px;
+  opacity:0;
+}
+
+.page-contact .form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.9rem 1rem;
+}
+
+.page-contact .field{
+  display:grid;
+  gap:.35rem;
+}
+
+.page-contact .field--full{
+  grid-column:1 / -1;
+}
+
+.page-contact label{
+  font-size:.9rem;
+  font-weight:600;
+  color:#0f172a;
+}
+
+.page-contact input,
+.page-contact select,
+.page-contact textarea{
+  width:100%;
+  border-radius:14px;
+  border:1px solid rgba(148,163,184,0.7);
+  background:rgba(255,255,255,0.92);
+  padding:.75rem .85rem;
+  font:inherit;
+  color:#111827;
+  transition:border-color .18s ease-out, box-shadow .18s ease-out, background .18s ease-out;
+}
+
+.page-contact textarea{
+  resize:vertical;
+  min-height:160px;
+}
+
+.page-contact input::placeholder,
+.page-contact textarea::placeholder{
+  color:#6b7280;
+}
+
+.page-contact input:focus,
+.page-contact select:focus,
+.page-contact textarea:focus{
+  outline:none;
+  border-color:rgba(14,165,233,0.9);
+  box-shadow:0 0 0 3px rgba(14,165,233,0.18);
+  background:#ffffff;
+}
+
+.page-contact .form-footer{
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  margin-top:1rem;
+}
+
+.page-contact .form-note{
+  margin:0;
+  color:var(--text-muted);
+  font-size:.96rem;
+}
+
+.page-contact .form-note a{
+  color:#0369a1;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.page-contact .form-note a:hover{
+  color:#0ea5e9;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------- */
+
+@media (max-width:1024px){
+  .page-contact .contact-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:1.8rem;
+  }
+
+  .page-contact .contact-aside{
+    padding-right:0;
+    border-right:none;
+    padding-bottom:1.2rem;
+    border-bottom:1px solid rgba(209,213,219,0.9);
+  }
+}
+
+@media (max-width:768px){
+  .page-contact .hero-contact{
+    height:auto;
+    padding-top:3.5rem;
+    padding-bottom:3rem;
+  }
+
+  .page-contact .hero-contact-inner{
+    height:auto;
+    align-items:flex-start;
+  }
+
+  .page-contact .hero-contact-chips{
+    gap:.5rem;
+  }
+
+  .page-contact .hero-panel-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .page-contact .hero-panel-actions .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .page-contact .form-grid{
+    grid-template-columns:minmax(0,1fr);
+  }
+
+  .page-contact .field--full{
+    grid-column:auto;
+  }
+}

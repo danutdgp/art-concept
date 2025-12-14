@@ -82,14 +82,16 @@ p{margin:0 0 .5em;font-size:.97rem;}
 .btn-outline-light{background:transparent;color:#e5f2fc;border-color:rgba(226,232,240,.7);}
 .btn-outline-light:hover{background:rgba(15,23,42,.25);border-color:#e5f2fc;}
 .btn-nav{
-  padding-inline:1.1rem;
+  padding-inline:1.35rem;   /* era 1.1rem -> mai mult spațiu stânga/dreapta */
   padding-block:.42rem;
   border-radius:8px;
   background:rgba(14,165,233,.04);
   border:1px solid rgba(14,165,233,.85);
   color:#0369a1;
   font-weight:500;
+  letter-spacing:.02em;     /* subtil, ca să respire textul */
 }
+
 .btn-nav:hover{
   background:rgba(14,165,233,.12);
   color:#0369a1;
@@ -455,5 +457,112 @@ p{margin:0 0 .5em;font-size:.97rem;}
   .portfolio-item:hover{
     transform:translateY(-6px);
     box-shadow:0 24px 50px rgba(15,23,42,0.3);
+  }
+}
+/* ======================================================
+   INDEX – text ca pe restul + scroll reveal (scoped)
+====================================================== */
+
+/* text un pic mai mare + puțin mai gros (ca pe paginile cu body.page-...) */
+body.page-index p,
+body.page-index li{
+  font-size:1.02rem;
+  line-height:1.7;
+  font-weight:500;
+}
+
+body.page-index .section-subtitle{
+  font-size:1.02rem;
+  font-weight:500;
+}
+
+/* pe index, footer-bottom era mic (0.82rem). Îl aducem la aceeași “greutate” vizuală */
+body.page-index .footer-bottom p{
+  font-size:0.92rem;
+  font-weight:500;
+}
+
+/* Scroll Reveal – ca la Servicii/Portofoliu */
+body.page-index .reveal-up,
+body.page-index .reveal-left,
+body.page-index .reveal-right,
+body.page-index .reveal-zoom,
+body.page-index .reveal-stagger > *{
+  opacity:0;
+  transform:translate3d(0,14px,0);
+  filter:blur(10px);
+  transition:
+    opacity .85s cubic-bezier(.2,.9,.2,1),
+    transform .95s cubic-bezier(.2,.9,.2,1),
+    filter .85s cubic-bezier(.2,.9,.2,1);
+  will-change:transform,opacity,filter;
+}
+
+body.page-index .reveal-left{ transform:translate3d(-36px,10px,0) rotate(-.4deg); }
+body.page-index .reveal-right{ transform:translate3d(36px,10px,0) rotate(.4deg); }
+body.page-index .reveal-up{ transform:translate3d(0,26px,0); }
+
+body.page-index .reveal-zoom{
+  transform:translate3d(0,18px,0) scale(.94) rotate(-.6deg);
+  filter:blur(14px) saturate(.95);
+}
+
+body.page-index .is-inview{
+  opacity:1 !important;
+  transform:translate3d(0,0,0) scale(1) rotate(0) !important;
+  filter:blur(0) saturate(1) !important;
+}
+
+body.page-index .reveal-stagger > *{
+  transform:translate3d(0,18px,0);
+}
+
+/* Motion redus */
+@media (prefers-reduced-motion: reduce){
+  body.page-index .reveal-up,
+  body.page-index .reveal-left,
+  body.page-index .reveal-right,
+  body.page-index .reveal-zoom,
+  body.page-index .reveal-stagger > *{
+    transition:none !important;
+    transform:none !important;
+    filter:none !important;
+    opacity:1 !important;
+  }
+}
+/* Contact în header: desktop rămâne "chip", dar pe mobil devine link normal */
+.site-header .nav-list a.btn-nav::after{
+  display:none !important; /* nu vrem underline-ul de meniu pe buton */
+}
+
+/* Desktop (>=769px): păstrăm chip discret, cu aer lateral */
+@media (min-width:769px){
+  .site-header .nav-list a.btn.btn-nav{
+    padding:.15rem 0.5rem !important;
+    letter-spacing:.02em;
+  }
+}
+
+/* Mobil (<=768px): Contact să arate ca un item normal din meniu */
+@media (max-width:768px){
+  .site-header .nav-list a.btn.btn-nav{
+    width:100% !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+
+    /* ca restul linkurilor din meniu */
+    padding:.45rem 0 !important;
+    color:#111827 !important;
+    font-weight:500 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+  }
+
+  /* să nu pară "buton" la hover */
+  .site-header .nav-list a.btn.btn-nav:hover{
+    background:transparent !important;
+    color:var(--accent-dark) !important;
   }
 }

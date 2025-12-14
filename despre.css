@@ -183,6 +183,9 @@ body.page-despre .section-subtitle{
   margin:0.5rem auto 0;
   border-radius:999px;
   background:linear-gradient(90deg,#0ea5e9,#0369a1);
+  transform-origin:left center;
+  transform:scaleX(0);
+  transition:transform .9s cubic-bezier(.2,.9,.2,1);
 }
 
 .page-despre .about-story-points{
@@ -365,6 +368,25 @@ body.page-despre .section-subtitle{
   }
 }
 
+/* alternanță la cardurile din "Cum lucrăm" (1/3 diferit, 2/4 alb) */
+.page-despre .about-process-steps .process-step:nth-child(odd) .process-body{
+  background:
+    repeating-linear-gradient(
+      -35deg,
+      rgba(14,165,233,0.10) 0px,
+      rgba(14,165,233,0.10) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    linear-gradient(135deg, rgba(2,132,199,0.08), transparent 55%),
+    #f8fbff;
+  border-color:rgba(148,163,184,0.65);
+}
+
+.page-despre .about-process-steps .process-step:nth-child(even) .process-body{
+  background:#ffffff;
+}
+
 /* ------------------------------------------------------
    VALORI – carduri cu poză din HTML + overlay albastru
 ------------------------------------------------------- */
@@ -432,15 +454,14 @@ body.page-despre .section-subtitle{
   margin-top:.2rem;
   border-radius:999px;
   background:linear-gradient(90deg,#0ea5e9,#38bdf8);
+  transform-origin:left center;
+  transform:scaleX(0);
+  transition:transform .9s cubic-bezier(.2,.9,.2,1);
 }
 
 .page-despre .about-value-content p{
   color:#e5e7eb;
   margin:0;
-}
-
-.page-despre .about-value-icon{
-  display:none;
 }
 
 @media (max-width:1024px){
@@ -503,6 +524,9 @@ body.page-despre .section-subtitle{
   margin:.45rem 0 0;
   border-radius:999px;
   background:linear-gradient(90deg,#0ea5e9,#0369a1);
+  transform-origin:left center;
+  transform:scaleX(0);
+  transition:transform .9s cubic-bezier(.2,.9,.2,1);
 }
 
 .page-despre .about-clients-text p{
@@ -561,7 +585,9 @@ body.page-despre .section-subtitle{
   height:8px;
   border-left:2px solid #0ea5e9;
   border-bottom:2px solid #0ea5e9;
-  transform:rotate(-45deg);
+  transform:rotate(-45deg) scale(.85);
+  opacity:0;
+  transition:opacity .6s ease, transform .65s cubic-bezier(.2,.9,.2,1);
 }
 
 /* linie între elemente, cu fade */
@@ -636,6 +662,23 @@ body.page-despre .section-subtitle{
   pointer-events:none;
 }
 
+@media (max-width:768px){
+  .page-despre .about-cta-actions{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:0 !important;
+  }
+
+  .page-despre .about-cta-actions .btn{
+    width:100% !important;
+    justify-content:center !important;
+    margin:0 0 14px 0 !important;
+  }
+
+  .page-despre .about-cta-actions .btn:last-child{
+    margin-bottom:0 !important;
+  }
+}
 
 /* ------------------------------------------------------
    HOVER subtil (desktop)
@@ -656,38 +699,80 @@ body.page-despre .section-subtitle{
     border-color:rgba(37,99,235,0.6);
   }
 }
-@media (max-width:768px){
-  .page-despre .about-cta-actions{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:0 !important;
-  }
 
-  .page-despre .about-cta-actions .btn{
-    width:100% !important;
-    justify-content:center !important;
-    margin:0 0 14px 0 !important; /* spațiu între butoane */
-  }
+/* ======================================================
+   Scroll Reveal – ca la Servicii/Portofoliu (scoped)
+====================================================== */
 
-  .page-despre .about-cta-actions .btn:last-child{
-    margin-bottom:0 !important;
-  }
-}
-/* Alternanță la cardurile din "Cum lucrăm" (1/3 diferit, 2/4 alb) */
-.page-despre .about-process-steps .process-step:nth-child(odd) .process-body{
-  background:
-    repeating-linear-gradient(
-      -35deg,
-      rgba(14,165,233,0.10) 0px,
-      rgba(14,165,233,0.10) 1px,
-      transparent 1px,
-      transparent 14px
-    ),
-    linear-gradient(135deg, rgba(2,132,199,0.08), transparent 55%),
-    #f8fbff;
-  border-color:rgba(148,163,184,0.65);
+.page-despre .reveal-up,
+.page-despre .reveal-left,
+.page-despre .reveal-right,
+.page-despre .reveal-zoom,
+.page-despre .reveal-stagger > *{
+  opacity:0;
+  transform:translate3d(0,14px,0);
+  filter:blur(10px);
+  transition:
+    opacity .85s cubic-bezier(.2,.9,.2,1),
+    transform .95s cubic-bezier(.2,.9,.2,1),
+    filter .85s cubic-bezier(.2,.9,.2,1);
+  will-change:transform,opacity,filter;
 }
 
-.page-despre .about-process-steps .process-step:nth-child(even) .process-body{
-  background:#ffffff;
+.page-despre .reveal-left{ transform:translate3d(-36px,10px,0) rotate(-.4deg); }
+.page-despre .reveal-right{ transform:translate3d(36px,10px,0) rotate(.4deg); }
+.page-despre .reveal-up{ transform:translate3d(0,26px,0); }
+.page-despre .reveal-zoom{
+  transform:translate3d(0,18px,0) scale(.94) rotate(-.6deg);
+  filter:blur(14px) saturate(.95);
+}
+
+.page-despre .is-inview{
+  opacity:1 !important;
+  transform:translate3d(0,0,0) scale(1) rotate(0) !important;
+  filter:blur(0) saturate(1) !important;
+}
+
+.page-despre .reveal-stagger > *{
+  transform:translate3d(0,18px,0);
+}
+
+/* “Draw” pentru liniile de sub titluri */
+.page-despre .is-inview.about-story-main h2::after{
+  transform:scaleX(1);
+}
+.page-despre .is-inview.about-clients-text h2::after{
+  transform:scaleX(1);
+}
+.page-despre .is-inview .about-value-content h3::after{
+  transform:scaleX(1);
+}
+
+/* bifele din liste apar când intră coloana în view */
+.page-despre .is-inview.about-clients-lists .about-list li::before{
+  opacity:.95;
+  transform:rotate(-45deg) scale(1);
+}
+
+/* Motion redus */
+@media (prefers-reduced-motion: reduce){
+  .page-despre .reveal-up,
+  .page-despre .reveal-left,
+  .page-despre .reveal-right,
+  .page-despre .reveal-zoom,
+  .page-despre .reveal-stagger > *{
+    transition:none !important;
+    transform:none !important;
+    filter:none !important;
+    opacity:1 !important;
+  }
+  .page-despre .about-story-main h2::after,
+  .page-despre .about-clients-text h2::after,
+  .page-despre .about-value-content h3::after{
+    transform:none !important;
+  }
+  .page-despre .about-list li::before{
+    opacity:1 !important;
+    transform:rotate(-45deg) scale(1) !important;
+  }
 }

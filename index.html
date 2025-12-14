@@ -6,14 +6,17 @@
 
   <title>Confectii metalice și structuri metalice la comandă | ART Concept</title>
   <meta name="description" content="Confectii metalice și structuri metalice la comandă: porți, garduri, balustrade, structuri metalice și containere modulare. Proiectare, execuție și montaj pentru rezidențial și industrial." />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <meta name="theme-color" content="#f3f7fb" />
   <meta name="author" content="ART METAL CONCEPT CONSTRUCT SRL" />
 
   <link rel="canonical" href="https://art-concept.ro/" />
+  <link rel="alternate" href="https://art-concept.ro/" hreflang="ro-RO" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ART Concept" />
+  <meta property="og:locale" content="ro_RO" />
   <meta property="og:title" content="Confectii metalice și structuri metalice la comandă | ART Concept" />
   <meta property="og:description" content="Porți, garduri, balustrade, structuri metalice și containere modulare executate la comandă." />
   <meta property="og:url" content="https://art-concept.ro/" />
@@ -24,10 +27,11 @@
   <meta name="twitter:description" content="Confectii metalice și structuri metalice la comandă pentru case, clădiri și spații industriale." />
   <meta name="twitter:image" content="https://art-concept.ro/images/cover-art-concept.avif" />
 
-  <!-- Favicoane (exemple) -->
+  <!-- Favicoane -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Fonturi -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,9 +39,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD (logo/publisher) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://art-concept.ro/#org",
+        "name":"ART Concept",
+        "legalName":"ART METAL CONCEPT CONSTRUCT SRL",
+        "url":"https://art-concept.ro/",
+        "logo":{"@type":"ImageObject","url":"https://art-concept.ro/images/logo-art-concept.avif"},
+        "telephone":"+40761320338",
+        "email":"marian_cotea_73@yahoo.com",
+        "sameAs":[
+          "https://web.facebook.com/Artmetalc",
+          "https://www.tiktok.com/@.art.metal.concep"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://art-concept.ro/#website",
+        "url":"https://art-concept.ro/",
+        "name":"ART Concept",
+        "publisher":{"@id":"https://art-concept.ro/#org"},
+        "inLanguage":"ro-RO"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://art-concept.ro/#webpage",
+        "url":"https://art-concept.ro/",
+        "name":"Confectii metalice și structuri metalice la comandă | ART Concept",
+        "isPartOf":{"@id":"https://art-concept.ro/#website"},
+        "about":{"@id":"https://art-concept.ro/#org"},
+        "inLanguage":"ro-RO",
+        "description":"Confectii metalice și structuri metalice la comandă: porți, garduri, balustrade, structuri metalice și containere modulare. Proiectare, execuție și montaj pentru rezidențial și industrial."
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="page-index">
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
@@ -56,7 +101,6 @@
           <li><a href="despre.html">Despre noi</a></li>
           <li><a href="servicii.html">Servicii</a></li>
           <li><a href="portofoliu.html">Portofoliu</a></li>
-          <li><a href="proces.html">Proces de lucru</a></li>
           <li><a href="contact.html" class="btn btn-nav">Contact</a></li>
         </ul>
       </nav>
@@ -71,7 +115,7 @@
         <article class="hero-slide is-active" style="background-image:url('images/hero-metal-1.avif');">
           <div class="hero-gradient"></div>
           <div class="container hero-slide-inner">
-            <div class="hero-panel">
+            <div class="hero-panel reveal-left">
               <p class="hero-panel-eyebrow">CONSTRUCȚII DIN METAL</p>
               <h1 class="hero-panel-title">
                 <span class="text-accent">Structuri metalice</span><br />
@@ -81,7 +125,7 @@
                 Proiectăm și executăm confectii metalice, structuri și elemente de rezistență
                 pentru curți, spații comerciale și hale industriale.
               </p>
-              <div class="hero-panel-actions">
+              <div class="hero-panel-actions reveal-up">
                 <a href="contact.html" class="btn btn-primary">Contactează-ne</a>
                 <a href="portofoliu.html" class="btn btn-outline-light">Vezi lucrările</a>
               </div>
@@ -93,7 +137,7 @@
         <article class="hero-slide" style="background-image:url('images/hero-metal-2.avif');">
           <div class="hero-gradient"></div>
           <div class="container hero-slide-inner">
-            <div class="hero-panel">
+            <div class="hero-panel reveal-left">
               <p class="hero-panel-eyebrow">PORȚI, GARDURI, BALUSTRADE</p>
               <h1 class="hero-panel-title">
                 <span class="text-accent">Confectii metalice</span><br />
@@ -103,7 +147,7 @@
                 Porți culisante, garduri metalice și balustrade executate la comandă,
                 pregătite pentru utilizare zilnică și automatizare.
               </p>
-              <div class="hero-panel-actions">
+              <div class="hero-panel-actions reveal-up">
                 <a href="servicii.html" class="btn btn-primary">Vezi tipurile de lucrări</a>
                 <a href="contact.html" class="btn btn-outline-light">Cere ofertă</a>
               </div>
@@ -115,7 +159,7 @@
         <article class="hero-slide" style="background-image:url('images/hero-metal-3.avif');">
           <div class="hero-gradient"></div>
           <div class="container hero-slide-inner">
-            <div class="hero-panel">
+            <div class="hero-panel reveal-left">
               <p class="hero-panel-eyebrow">PROIECTARE + EXECUȚIE + MONTAJ</p>
               <h1 class="hero-panel-title">
                 <span class="text-accent">Structuri metalice</span><br />
@@ -125,8 +169,8 @@
                 Ne ocupăm de întregul flux: măsurători, proiect, producție în atelier
                 și montaj la locație, cu verificarea finală a lucrării.
               </p>
-              <div class="hero-panel-actions">
-                <a href="proces.html" class="btn btn-primary">Află cum lucrăm</a>
+              <div class="hero-panel-actions reveal-up">
+                <a href="servicii.html" class="btn btn-primary">Află cum lucrăm</a>
                 <a href="contact.html" class="btn btn-outline-light">Trimite proiectul</a>
               </div>
             </div>
@@ -138,10 +182,11 @@
       <button class="hero-nav hero-next" aria-label="Slide următor">&#10095;</button>
       <div class="hero-dots" role="tablist"></div>
     </section>
+
     <!-- AVANTAJE -->
     <section class="section section-advantages" id="avantaje">
       <div class="container advantages-layout">
-        <div class="advantages-left">
+        <div class="advantages-left reveal-left">
           <div class="section-header">
             <p class="section-kicker">AVANTAJE</p>
             <h2><span class="highlight-blue">Structuri metalice</span> pentru proiecte rezidențiale și industriale</h2>
@@ -151,7 +196,7 @@
             </p>
           </div>
 
-          <div class="advantages-list">
+          <div class="advantages-list reveal-stagger">
             <div class="adv-row">
               <div class="adv-icon">⏱</div>
               <div class="adv-text">
@@ -183,12 +228,11 @@
           </div>
         </div>
 
-        <div class="advantages-right">
+        <div class="advantages-right reveal-right">
           <div class="advantages-visual">
             <img src="images/avantaje-structura-metalica.avif" alt="Structură metalică pentru casă" loading="lazy" />
           </div>
 
-          <!-- cele 2 poze mici, sub imaginea mare -->
           <div class="advantages-thumbs">
             <div class="advantages-thumb advantages-thumb--first">
               <img src="images/avantaje-thumb-1.avif" alt="Detaliu poartă metalică" loading="lazy" />
@@ -201,12 +245,11 @@
       </div>
     </section>
 
-
     <!-- SERVICII -->
     <section class="section section-services" id="servicii">
       <div class="services-bg"></div>
       <div class="container">
-        <header class="section-header">
+        <header class="section-header reveal-up">
           <p class="section-kicker">SERVICII OFERITE</p>
           <h2><span class="highlight-blue">Confectii metalice</span> pentru curți, clădiri și spații industriale</h2>
           <p class="section-subtitle">
@@ -215,7 +258,7 @@
           </p>
         </header>
 
-        <div class="services-grid">
+        <div class="services-grid reveal-stagger">
           <article class="service-teaser">
             <div class="service-image" style="background-image:url('images/service-porti-garduri.avif');"></div>
             <div class="service-body">
@@ -224,7 +267,7 @@
                 Sisteme complete de împrejmuire: porți batante sau culisante, garduri metalice
                 pline sau cu panouri, pregătite pentru automatizare.
               </p>
-              <a href="servicii.html#porti-garduri" class="service-link">Detalii &raquo;</a>
+              <a href="servicii.html#serv-porti" class="service-link">Detalii &raquo;</a>
             </div>
           </article>
 
@@ -236,7 +279,7 @@
                 Balustrade pentru scări și terase, scări metalice interioare sau exterioare,
                 cu finisaje curate și prinderi solide.
               </p>
-              <a href="servicii.html#balustrade-scari" class="service-link">Detalii &raquo;</a>
+              <a href="servicii.html#serv-balustrade" class="service-link">Detalii &raquo;</a>
             </div>
           </article>
 
@@ -248,27 +291,27 @@
                 Structuri metalice pentru hale, copertine, șarpante și containere modulare,
                 gândite pentru încărcările proiectului.
               </p>
-              <a href="servicii.html#structuri" class="service-link">Detalii &raquo;</a>
+              <a href="servicii.html#serv-structuri" class="service-link">Detalii &raquo;</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-        <!-- SISTEM / DE CE NOI -->
+    <!-- SISTEM / DE CE NOI -->
     <section class="section section-system">
       <div class="container">
-        <header class="section-header system-header">
+        <header class="section-header system-header reveal-up">
           <p class="section-kicker">DE CE SĂ APELEZI LA NOI</p>
           <h2>Sistem complet pentru <span class="highlight-blue">confectii și structuri metalice</span></h2>
         </header>
 
-        <div class="system-grid">
+        <div class="system-grid reveal-stagger">
           <div class="system-row">
             <div class="system-icon">🏗</div>
             <div class="system-text">
               <h3>Experiență pe lucrări reale</h3>
-              <p>Lucrăm zilnic cu porți, garduri și structuri metalice montate în curți, spații comerciale și hale, nu doar proiecte „pe hârtie”.</p>
+              <p>Lucrăm zilnic cu porți, garduri și structuri metalice montate în curți, spații comerciale și hale.</p>
             </div>
           </div>
 
@@ -276,7 +319,7 @@
             <div class="system-icon">📐</div>
             <div class="system-text">
               <h3>Consiliere înainte de ofertă</h3>
-              <p>Discutăm clar despre nevoie, buget și soluții posibile, ca să știi de la început ce variantă se potrivește proiectului tău.</p>
+              <p>Discutăm clar despre nevoie, buget și soluții posibile, ca să știi de la început ce ți se potrivește.</p>
             </div>
           </div>
 
@@ -284,7 +327,7 @@
             <div class="system-icon">👷</div>
             <div class="system-text">
               <h3>Echipă completă: proiectare + execuție</h3>
-              <p>Ne ocupăm de tot fluxul – măsurători, desen, confecție în atelier și montaj – fără să te plimbăm între mai mulți furnizori.</p>
+              <p>Ne ocupăm de tot fluxul: măsurători, desen, confecție în atelier și montaj.</p>
             </div>
           </div>
 
@@ -292,7 +335,7 @@
             <div class="system-icon">✅</div>
             <div class="system-text">
               <h3>Termene și bugete asumate</h3>
-              <p>Stabilim de la început termene realiste și costuri clare, ca să nu apară surprize pe parcursul lucrării.</p>
+              <p>Stabilim de la început termene realiste și costuri clare, ca să nu apară surprize pe parcurs.</p>
             </div>
           </div>
         </div>
@@ -302,7 +345,7 @@
     <!-- PORTOFOLIU -->
     <section class="section section-portfolio-preview" id="portofoliu">
       <div class="container">
-        <header class="section-header">
+        <header class="section-header reveal-up">
           <p class="section-kicker">PORTOFOLIU</p>
           <h2>Lucrări realizate</h2>
           <p class="section-subtitle">
@@ -310,11 +353,11 @@
           </p>
         </header>
 
-        <div class="portfolio-strip">
+        <div class="portfolio-strip reveal-stagger">
           <figure class="portfolio-item">
             <div class="portfolio-image" style="background-image:url('images/porti-metalice-1.avif');"></div>
             <figcaption>
-              <h3>Poartă culisantă metalică usoară</h3>
+              <h3>Poartă culisantă metalică ușoară</h3>
               <p>Poartă culisantă pregătită pentru automatizare, cu cadru rigid.</p>
             </figcaption>
           </figure>
@@ -336,7 +379,7 @@
           </figure>
         </div>
 
-        <div class="section-cta section-cta-secondary">
+        <div class="section-cta section-cta-secondary reveal-up">
           <a href="portofoliu.html" class="btn btn-outline">Vezi portofoliul complet</a>
         </div>
       </div>
@@ -345,7 +388,7 @@
     <!-- CTA FINAL CONTACT -->
     <section class="section section-final-cta" id="contact">
       <div class="container final-cta-inner">
-        <div>
+        <div class="reveal-left">
           <p class="section-kicker">CONTACT</p>
           <h2>Spune-ne ce lucrare ai în plan</h2>
           <p class="final-cta-text">
@@ -353,7 +396,7 @@
             Îți răspundem cu întrebări clare și o ofertă adaptată proiectului tău.
           </p>
         </div>
-        <div class="final-cta-actions">
+        <div class="final-cta-actions reveal-right">
           <a href="contact.html" class="btn btn-primary">Completează formularul de contact</a>
           <a href="tel:+40761320338" class="btn btn-call">Sau sună direct la 0761 320 338</a>
         </div>
@@ -364,7 +407,6 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- Brand -->
       <div class="footer-col footer-brand">
         <div class="footer-logo">
           <img src="images/logo-art-concept.avif" alt="ART Concept" class="logo-img" />
@@ -378,7 +420,6 @@
         </p>
       </div>
 
-      <!-- Contact -->
       <div class="footer-col footer-contact">
         <h3>Informații de contact</h3>
         <ul class="footer-contact-list">
@@ -419,7 +460,6 @@
         </ul>
       </div>
 
-      <!-- Pagini -->
       <div class="footer-col footer-pages">
         <h3>Pagini</h3>
         <ul class="footer-list">
@@ -427,12 +467,10 @@
           <li><a href="despre.html">Despre noi</a></li>
           <li><a href="servicii.html">Servicii</a></li>
           <li><a href="portofoliu.html">Portofoliu</a></li>
-          <li><a href="proces.html">Proces de lucru</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Social -->
       <div class="footer-col footer-social">
         <h3>Social</h3>
         <ul class="footer-social-list">
@@ -467,33 +505,43 @@
     </div>
   </footer>
 
-  <script>
-    // anul din footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+  // anul din footer
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
-    // meniu mobil
+  // meniu mobil
+  (function () {
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.getElementById('primary-menu');
-    if (navToggle && navList) {
-      navToggle.addEventListener('click', () => {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', String(!expanded));
-        navList.classList.toggle('is-open');
-      });
-    }
+    if (!navToggle || !navList) return;
 
-    // HERO SLIDER
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('is-open');
+    });
+  })();
+
+  // HERO SLIDER
+  (function () {
     const slider = document.querySelector('.hero-slides');
-    if (slider) {
-      const slides = Array.from(slider.querySelectorAll('.hero-slide'));
-      const dotsContainer = document.querySelector('.hero-dots');
-      const prevBtn = document.querySelector('.hero-prev');
-      const nextBtn = document.querySelector('.hero-next');
-      const intervalMs = parseInt(slider.dataset.interval, 10) || 6000;
+    if (!slider) return;
 
-      let current = 0;
-      let timer;
+    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    if (!slides.length) return;
 
+    const dotsContainer = document.querySelector('.hero-dots');
+    const prevBtn = document.querySelector('.hero-prev');
+    const nextBtn = document.querySelector('.hero-next');
+    const intervalMs = parseInt(slider.dataset.interval, 10) || 6000;
+
+    let current = 0;
+    let timer = null;
+
+    // dots
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
       slides.forEach((_, index) => {
         const dot = document.createElement('button');
         dot.className = 'hero-dot';
@@ -502,35 +550,95 @@
         dot.addEventListener('click', () => goToSlide(index, true));
         dotsContainer.appendChild(dot);
       });
-      const dots = Array.from(dotsContainer.querySelectorAll('.hero-dot'));
-
-      function goToSlide(index, resetTimer) {
-        slides[current].classList.remove('is-active');
-        dots[current].classList.remove('is-active');
-        current = (index + slides.length) % slides.length;
-        slides[current].classList.add('is-active');
-        dots[current].classList.add('is-active');
-        if (resetTimer) {
-          clearInterval(timer);
-          timer = setInterval(nextSlide, intervalMs);
-        }
-      }
-
-      function nextSlide() {
-        goToSlide(current + 1, false);
-      }
-
-      function prevSlide() {
-        goToSlide(current - 1, true);
-      }
-
-      slides[0].classList.add('is-active');
-      if (dots[0]) dots[0].classList.add('is-active');
-      timer = setInterval(nextSlide, intervalMs);
-
-      if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(current + 1, true));
-      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
     }
-  </script>
+    const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('.hero-dot')) : [];
+
+    function setActive(index) {
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    }
+
+    function goToSlide(index, resetTimer) {
+      current = (index + slides.length) % slides.length;
+      setActive(current);
+
+      if (resetTimer) {
+        clearInterval(timer);
+        timer = setInterval(nextSlide, intervalMs);
+      }
+    }
+
+    function nextSlide() {
+      goToSlide(current + 1, false);
+    }
+
+    function prevSlide() {
+      goToSlide(current - 1, true);
+    }
+
+    setActive(0);
+    timer = setInterval(nextSlide, intervalMs);
+
+    if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(current + 1, true));
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+  })();
+
+  // Scroll reveal (INDEX) – fără “gol” sub HERO (pornește și fără scroll)
+  (function () {
+    const scope = document.querySelector('.page-index');
+    if (!scope) return;
+
+    const targets = scope.querySelectorAll(
+      '.reveal-up, .reveal-left, .reveal-right, .reveal-zoom, .reveal-stagger'
+    );
+    if (!targets.length) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      targets.forEach(el => el.classList.add('is-inview'));
+      scope.querySelectorAll('.reveal-stagger > *').forEach(ch => ch.classList.add('is-inview'));
+      return;
+    }
+
+    const revealElement = (el) => {
+      if (el.classList.contains('is-inview')) return;
+      el.classList.add('is-inview');
+
+      if (el.classList.contains('reveal-stagger')) {
+        const kids = Array.from(el.children);
+        kids.forEach((kid, i) => {
+          kid.style.transitionDelay = (i * 90) + 'ms';
+          requestAnimationFrame(() => kid.classList.add('is-inview'));
+        });
+      }
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        revealElement(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.08,
+      // declanșează puțin înainte să intre complet în viewport
+      rootMargin: '0px 0px 18% 0px'
+    });
+
+    targets.forEach(el => io.observe(el));
+
+    // la load: arată imediat ce e deja în (sau aproape de) viewport
+    const revealOnLoad = () => {
+      targets.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 1.02) revealElement(el);
+      });
+    };
+
+    requestAnimationFrame(() => requestAnimationFrame(revealOnLoad));
+    window.addEventListener('load', revealOnLoad, { once: true });
+  })();
+</script>
+
 </body>
 </html>
